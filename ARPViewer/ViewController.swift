@@ -79,7 +79,7 @@ class TableViewController: UITableViewController {
     
     func refresh() {
         self.contents =  Utils.allIPs()
-        self.defaultGateway = Utils.getDefaultGateway()
+        self.defaultGateway = Utils.getDefaultGateway() ?? ""
         self.myIPAddr = Utils.getIPAddress()
         self.tableView.reloadData()
     }
